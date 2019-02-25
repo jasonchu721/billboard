@@ -1,0 +1,8 @@
+<h1><%= @list.name %></h1>
+<h4>Name: <%= @artist.name %></h4>
+<h4>Avatar: <%= @artist.avatar %></h4>
+<br />
+<%= link_to 'View Songs', new_artist_song_path(@artist) %> |
+<%= link_to 'Edit Artist', edit_list_artist_path([@list, @artist]) %> |
+<%= link_to 'Delete Artist', [@list, @artist], method: :delete %> |
+<%= link_to 'Back To Artists', list_artists_path(@list) %>

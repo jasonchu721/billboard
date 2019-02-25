@@ -1,0 +1,39 @@
+<h1>Click to View Artist</h1>
+<%= link_to 'Add Artist', new_list_artist_path(@list) %>
+<hr />
+
+
+<div class="ui grid">
+  <% @artists.each do |artist| %>
+    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+      <div class="ui card">
+        <div class="image">
+          <img src="https://robohash.org/<%= artist.avatar %>?set=4" />
+        </div>
+        <div class="content">
+          <div class="extra content">
+            <div class="ui two buttons">
+              <div class="basic green button">
+    <li><%= link_to artist.name, [@list, artist] %></li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
