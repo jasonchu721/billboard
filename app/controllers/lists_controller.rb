@@ -2,7 +2,8 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :update, :edit, :destroy]
 
   def index
-    @lists = List.all
+    @lists = current_user.lists
+    #@lists = List.all
   end
 
   def show
@@ -16,7 +17,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(list_params)
+    @list = current_user.lists.new(list_params)
     
     if @list.save
       redirect_to lists_path

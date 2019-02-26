@@ -3,7 +3,7 @@
 <hr />
 <% @lists.each do |list| %>
   <h1><%= list.name %></h1>
-  <%= link_to "Show", list_path(list) %> |
+  <%= link_to "Show Artists", list_artists_path(list) %> |
   <%= link_to "Edit", edit_list_path(list) %> |
   <%= link_to "Delete", list_path(list), method: :delete %>
 <% end %>
